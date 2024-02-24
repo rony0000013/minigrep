@@ -26,8 +26,8 @@ jobs:
             bin: minigrep-linux-amd64
           - os_name: Windows-x86_64
             os: windows-latest
-            target: x86_64-pc-windows-msvc
-            bin: minigrep-amd64.exe
+            target: x86_64-pc-windows-gnu
+            bin: minigrep-win64.exe
           - os_name: macOS-x86_64
             os: macOS-latest
             target: x86_64-apple-darwin
