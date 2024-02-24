@@ -53,11 +53,11 @@ pub fn search<'a>(query: &str, contents: &'a str, ignore_case: bool) {
         matches.insert(0, 0);
         matches.push(line.len());
 
-        println!("{:?}", matches[..]
+        println!("{}", matches[..]
             .windows(2)
             .fold((String::new(), true), |(str, f), x| {
-                (format!("{str}{:?}", if f {line[x[0]..x[1]].white()} else {line[x[0]..x[1]].red()}), !f)
-            })
+                (format!("{str}{}", if f {line[x[0]..x[1]].white()} else {line[x[0]..x[1]].red()}), !f)
+            }).0
         );
 
         // let new_line = if ignore_case {
